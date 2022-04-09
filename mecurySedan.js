@@ -38,10 +38,13 @@ class Car extends VehicleModule.Vehicle {
       this.passenger += numberOfPassengers
    }
 
-   scheduleService() {
+   scheduleServices() {
       if (this.mileage > 30000) {
-         this.timeForMaintenance = true
-         console.log("It's time to bring the car in for a tune-up")
+         this.timeForMaintenance = true;
+         console.log("It's time to bring the car in for a tune-up");
+      }
+      else {
+         console.log("Service not needed.");
       }
    }
 }
@@ -65,3 +68,5 @@ while (x < 10) {
 }
 
 c.stop();
+
+c.scheduleServices();
